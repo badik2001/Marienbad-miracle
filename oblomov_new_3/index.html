@@ -1,0 +1,69 @@
+﻿<html>
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	<title>Рукопись</title>
+
+	<style type="text/css">
+		body,
+		html,
+		div,
+		img {
+			cursor: url('img/blank.cur');
+		}
+	</style>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body">
+
+	<div class="header">
+		<h1 class="h1">
+			И. А. Гончаров. "Обломов". Часть II. Черновая рукопись.
+		</h1>
+	</div>
+
+	<div class="main">
+
+		<div class="text">
+			<p class="p">
+				Вы можете повторить "мариенбадское чудо".
+			</p>
+			<p class="p">
+				Возьмите перо и прикоснитесь к бумаге
+			</p>
+		</div>
+
+		<div class="main-container">
+
+			<div class="manuscript-container">
+				<div class="manuscript-frame">
+					<div class="container">
+						<img class="img_head" src="img/manuscript_head_new.gif" alt="" />
+						<img id="bandit" class="img1" src="img/part1_1.gif" alt="" />
+					</div>
+					<img class="img2" src="img/part2.gif" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="quill">
+		</div>
+	</div>
+	
+	<script>
+		let container = document.querySelector('.manuscript-container');
+
+		let btn = document.querySelector('.quill');
+		btn.onclick = function () {
+			container.classList.add('test22');
+		}
+
+		console.log(container);
+		
+	</script>
+
+</body>
+
+</html>
