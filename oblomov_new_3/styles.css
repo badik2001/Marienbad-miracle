@@ -141,33 +141,70 @@ body.body{
     right: 60px;
 }
 
-.quill{
-    width: 38%;
-    margin-right: 0%;
-    margin-top: 18%;
-    margin-left: 4%;
+.quill-container{    
+    width: calc((100vw - 966px)/2);
+    height: calc(100% - 175px);
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
-.quill::before{
+.quill{
+    position: relative;
+    height: 192px;
+    width: 192px;    
+    cursor: pointer;    
+}
+
+.quill.zoom-animation{    
+	animation: zoom-pulse 1s infinite;
+}
+
+/* .quill:hover{
+    transform: scale(1.1, 1.1);
+} */
+
+@keyframes zoom-pulse {
+    0% {
+		transform: scale(1);
+		 
+	}
+
+	50% {
+		transform: scale(0.95);
+		
+	}
+
+	100% {
+		transform: scale(1);
+		
+	}
+  }
+
+.quill:before{
     content: "\e912";
     height: auto;
-    position: relative;
+    position: absolute;
     font-family: "icons";
     font-size: 192px;
-    color:lightslategray ;
+    color:#fff ;
 }
 
-.quill::after{
+.quill:after{
     content: "";
     display: block;
     width: 30px;
     height: 30px;
     position: absolute;
-    border: 4px solid lightslategray;
+    border: 4px solid #fff;
     border-radius: 50%;
+    /* animation: pulse 2.5s linear infinite; */
+    right: 89%;
+    top: 89%;
+}
+
+.quill.round-pulse:after{
     animation: pulse 2.5s linear infinite;
-    top: 56%;
-    left: 78%;
 }
 
 @keyframes pulse {
@@ -184,11 +221,30 @@ body.body{
     }
   }
  
-.text{
-    background-image: url(img/manuscript_background_empty.png);
+.text-container{
+    width: calc((100vw - 966px)/2);
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;   
     border-radius: 4px;
-    margin: 23% 4%;
+    padding: 30px;    
+}
 
+.text{
+    font-family: sans-serif;
+    background-image: url(img/gold.jpg);
+    padding: 30px;
+    border-radius: 4px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #0c0c0c;
+    font-weight: bold;    
+    font-style: italic;
+}
+
+.text .p{
+    font-size: 21px;
 }
 
 .p{
@@ -239,7 +295,7 @@ body.body{
     right: 0;
     width: 100%;
     height: 100%;
-    background: hsl(24, 100%, 90%);
+    background: #FF5722;
 
 }
 

@@ -32,13 +32,17 @@
 
 	<div class="main">
 
-		<div class="text">
-			<p class="p">
-				Вы можете повторить "мариенбадское чудо".
-			</p>
-			<p class="p">
-				Возьмите перо и прикоснитесь к бумаге
-			</p>
+		<div class="text-container">
+			
+			<div class="text">
+				<p class="p">
+					Вы можете повторить "мариенбадское чудо".
+				</p>
+				<p class="p">
+					Возьмите перо и прикоснитесь к бумаге
+				</p>
+			</div>
+			
 		</div>
 
 		<div class="main-container">
@@ -53,7 +57,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="quill">
+		<div class="quill-container">
+			<div class="quill zoom-animation">
+			</div>
 		</div>
 	</div>
 	
@@ -61,16 +67,22 @@
 		let container = document.querySelector('.manuscript-container');
 
 		let btn = document.querySelector('.quill');
-
 		let img2 = document.querySelector('.img2');
 		let status_line = document.querySelector('.status-line');
+		
 		btn.onclick = function () {
 			container.classList.add('test22');
+			btn.classList.remove('zoom-animation');
+			btn.classList.add('round-pulse');
 			status_line.classList.add('status-line-moved');
 			setTimeout(() => {
 				// img2.style.display = "block";
 				img2.classList.add('animate2');
 			}, 74000);
+
+			setTimeout(() => {
+				btn.classList.remove('round-pulse');
+			}, 155000);
 		}
 
 		console.log(container);
