@@ -18,6 +18,11 @@
 </head>
 
 <body class="body">
+	<div class="process-bar">
+		<div class="status-line">
+
+		</div>
+	</div>
 
 	<div class="header">
 		<h1 class="h1">
@@ -56,8 +61,16 @@
 		let container = document.querySelector('.manuscript-container');
 
 		let btn = document.querySelector('.quill');
+
+		let img2 = document.querySelector('.img2');
+		let status_line = document.querySelector('.status-line');
 		btn.onclick = function () {
 			container.classList.add('test22');
+			status_line.classList.add('status-line-moved');
+			setTimeout(() => {
+				// img2.style.display = "block";
+				img2.classList.add('animate2');
+			}, 74000);
 		}
 
 		console.log(container);
