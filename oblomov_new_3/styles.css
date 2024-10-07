@@ -34,9 +34,9 @@ body.body{
 }
 
 .header{
-    background-image: url(img/nav.avif);
+    background-image: url(img/nav.jpg);
     background-repeat: repeat-x;
-    background-size: 33vw;
+    background-color: #5b2702;
     padding: 15px;
     margin-bottom: 15px;
 }
