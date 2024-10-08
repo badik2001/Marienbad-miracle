@@ -17,7 +17,7 @@ body.body{
     width: 100vw;
     height: calc(100vh - 14px);
     padding-bottom: 30px;
-    background-size: 6%;
+    background-size: 100%;
 }
 
 .main{
